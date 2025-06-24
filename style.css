@@ -1,0 +1,19 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f5f5f5;
+    flex-direction: column;
+}
+
+h1 {
+    padding: 20px 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid #e0e0e0;
+    text-align: center;
+}
