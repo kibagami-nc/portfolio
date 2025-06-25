@@ -16,7 +16,7 @@ h1 {
     box-shadow: none;
     border: none;
     text-align: left;
-    margin: 0 0 24px 0; /* augmente la marge en bas pour l'espace */
+    margin: 0 0 24px 0;
 }
 
 p {
@@ -46,7 +46,7 @@ p {
 
 .content-box {
     max-width: 400px;
-    margin-top: 400px; /* pour ne pas être caché par la barre */
+    margin-top: 400px;
     margin-left: 48px;
     background: #fff;
     border-radius: 20px;
