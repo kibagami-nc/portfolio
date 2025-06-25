@@ -17,10 +17,12 @@
         let lastScrollY = window.scrollY;
         const bar = document.getElementById('top-bar');
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                bar.classList.add('hide');
-            } else {
+            if (window.scrollY < lastScrollY) {
+                // On scrolle vers le haut : afficher la barre
                 bar.classList.remove('hide');
+            } else if (window.scrollY > lastScrollY && window.scrollY > 50) {
+                // On scrolle vers le bas : cacher la barre
+                bar.classList.add('hide');
             }
             lastScrollY = window.scrollY;
         });
