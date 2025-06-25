@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>BOUILLE Manley</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Salut, salut</h1>
-    <p>Voici mon portfolio</p>
+    <div id="top-bar">Bienvenue sur mon portfolio !</div>
+    <div class="content-box">
+        <h1>Bonjour 👋</h1>
+        <p>Je m'appelle Manley et voici mon portfolio</p>
+    </div>
+    <script>
+        let lastScrollY = window.scrollY;
+        const bar = document.getElementById('top-bar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                bar.classList.add('hide');
+            } else {
+                bar.classList.remove('hide');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
 </body>
+
 </html>
