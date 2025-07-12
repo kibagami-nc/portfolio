@@ -8,34 +8,36 @@
 </head>
 
 <body>
-    <script src="./js/style.js"></script>
+    <div class="Presentation">
+        <script src="./js/style.js"></script>
 
-    <canvas id="bg-anim" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;"></canvas>
+        <canvas id="bg-anim" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;"></canvas>
 
-    <div id="top-bar">Bienvenue sur mon portfolio !</div>
+        <div id="top-bar">Bienvenue sur mon portfolio !</div>
 
-    <div class="content-box">
-        <h1>Bonjour 👋</h1>
-        <p>Je m'appelle Manley et voici mon portfolio</p>
-    </div>
+        <div class="content-box">
+            <h1>Bonjour 👋</h1>
+            <p>Je m'appelle Manley et voici mon portfolio</p>
+        </div>
 
-    <script>
-        let lastScrollY = window.scrollY;
-        const bar = document.getElementById('top-bar');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY < lastScrollY) {
-                bar.classList.remove('hide');
-            } else if (window.scrollY > lastScrollY && window.scrollY > 50) {
-                bar.classList.add('hide');
-            }
-            lastScrollY = window.scrollY;
-        });
-    </script>
+        <script>
+            let lastScrollY = window.scrollY;
+            const bar = document.getElementById('top-bar');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY < lastScrollY) {
+                    bar.classList.remove('hide');
+                } else if (window.scrollY > lastScrollY && window.scrollY > 50) {
+                    bar.classList.add('hide');
+                }
+                lastScrollY = window.scrollY;
+            });
+        </script>
 
-    <div class="container">
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
+        <div class="container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
     </div>
 
     <div class="content-box-a-propos">
