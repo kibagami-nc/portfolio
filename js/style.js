@@ -52,9 +52,9 @@ window.addEventListener('DOMContentLoaded', function() {
             ctx.beginPath();
             const baseY = ((idx + 1) / (waveCount + 1)) * canvas.height;
             for (let x = 0; x <= canvas.width; x += 2) {
-                const smoothRandom = Math.sin(x * 0.015 + wave.phase * 1.5 + idx) * (8 + idx * 4);
+                const smoothRandom = Math.sin(x * 0.015 + wave.phase * 1.5 + idx) * (40 + idx * 8);
                 const y = baseY
-                    + Math.sin((x / wave.wavelength) * Math.PI * 2 + wave.phase) * (wave.amplitude + idx * 10)
+                    + Math.sin((x / wave.wavelength) * Math.PI * 2 + wave.phase) * (wave.amplitude + idx * 5)
                     + smoothRandom
                     + waveOffset;
                 if (x === 0) ctx.moveTo(x, y);
@@ -76,10 +76,10 @@ window.addEventListener('DOMContentLoaded', function() {
             grad.addColorStop(0, colorTop);
             grad.addColorStop(1, colorBottom);
             ctx.strokeStyle = grad;
-            ctx.lineWidth = 2 + idx * 2 ;
+            ctx.lineWidth = 2 + idx * 2;
             ctx.beginPath();
             for (let x = 0; x <= canvas.width; x += 2) {
-                const smoothRandom = Math.sin(x * 0.015 + wave.phase * 1.5 + idx) * (8 + idx * 4);
+                const smoothRandom = Math.sin(x * 0.015 + wave.phase * 1.5 + idx) * (3 + idx * 8);
                 const y = baseY
                     + Math.sin((x / wave.wavelength) * Math.PI * 2 + wave.phase) * (wave.amplitude + idx * 10)
                     + smoothRandom

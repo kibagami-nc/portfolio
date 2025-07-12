@@ -160,3 +160,28 @@ p {
     align-items: flex-start;
 }
 
+@media (max-width: 700px) {
+    .content-box {
+        max-width: 95vw;
+        margin-top: 80px;
+        margin-left: 2vw;
+        border-radius: 18px;
+        border-width: 10px;
+        padding: 18px 12px;
+    }
+    .container {
+        bottom: 40px;
+    }
+    #top-bar {
+        font-size: 1em;
+        padding: 10px 0;
+    }
+    .content-box-a-propos {
+        max-width: 95vw;
+        margin-left: 2vw;
+        margin-top: 40px;
+        border-radius: 18px;
+        padding: 18px 12px;
+    }
+}
+
