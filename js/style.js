@@ -43,11 +43,11 @@ window.addEventListener('DOMContentLoaded', function() {
             wave.phase += wave.speed;
             ctx.save();
             ctx.globalAlpha = 0.5 - idx * 0.08;
-            // Couleur de fond plus foncée à chaque profondeur
-            const baseR = 40 + idx * 10;
-            const baseG = 120 + idx * 5;
-            const baseB = 200 - idx * 30;
-            const fillColor = `rgba(${baseR - 20},${baseG - 20},${baseB - 40},0.5)`;
+            // Bleu de plus en plus foncé à chaque profondeur
+            const baseR = Math.max(0, 40 - idx * 10);
+            const baseG = Math.max(0, 120 - idx * 15);
+            const baseB = Math.max(0, 200 - idx * 40);
+            const fillColor = `rgba(${baseR},${baseG},${baseB},0.6)`;
 
             ctx.beginPath();
             const baseY = ((idx + 1) / (waveCount + 1)) * canvas.height;
@@ -60,7 +60,6 @@ window.addEventListener('DOMContentLoaded', function() {
                 if (x === 0) ctx.moveTo(x, y);
                 else ctx.lineTo(x, y);
             }
-            // Ferme la forme jusqu'en bas du canvas
             ctx.lineTo(canvas.width, canvas.height);
             ctx.lineTo(0, canvas.height);
             ctx.closePath();
@@ -72,8 +71,8 @@ window.addEventListener('DOMContentLoaded', function() {
             ctx.save();
             ctx.globalAlpha = 0.7 - idx * 0.15;
             const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
-            const colorTop = `rgba(${baseR},${baseG},${baseB},1)`;
-            const colorBottom = `rgba(${baseR - 20},${baseG - 20},${baseB - 40},1)`;
+            const colorTop = `rgba(${baseR + 20},${baseG + 20},${baseB + 20},1)`;
+            const colorBottom = `rgba(${baseR},${baseG},${baseB},1)`;
             grad.addColorStop(0, colorTop);
             grad.addColorStop(1, colorBottom);
             ctx.strokeStyle = grad;
