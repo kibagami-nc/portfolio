@@ -113,15 +113,18 @@ button.contact-top-bar:hover {
 /* Flèche */
 
 .fleche {
-    position: absolute;
-    left: 50%;
-    bottom: 150px;
-    transform: translateX(-50%);
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
     z-index: 1;
 }
+
 
 .chevron {
     position: relative;
