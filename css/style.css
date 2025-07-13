@@ -1,15 +1,4 @@
-.content-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-    z-index: 2;
-}
-
-.content-box-a-propos:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-    z-index: 2;
-}
-
+/* Fond, texte style et top-bar */
 
 body {
     min-height: 100vh;
@@ -56,9 +45,11 @@ p {
     transform: translateY(-100%);
 }
 
-.content-box {
-    max-width: 400px;
-    margin-top: 400px;
+/* Encadrée de présentation */
+
+.content-box-pres {
+    max-width: 500px;
+    margin-top: 300px;
     margin-left: 50px;
     background: #ffffff;
     border-radius: 30px;
@@ -70,16 +61,15 @@ p {
     align-items: flex-start;
 }
 
-
-
-.Presentation {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    position: relative;
+.content-box-pres:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    z-index: 2;
 }
 
-.container {
+/* Flèche */
+
+.fleche {
     position: absolute;
     left: 50%;
     bottom: 150px;
@@ -146,19 +136,7 @@ p {
     }
 }
 
-.content-box-a-propos {
-    max-width: 400px;
-    margin-top: 200px;
-    margin-left: 1350px;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border: 2px solid #e0e0e0;
-    padding: 32px 32px 24px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+/* Téléphone */
 
 @media (max-width: 700px) {
     .content-box {
