@@ -1,4 +1,4 @@
-/* Fond, texte style et top-bar */
+/* Fond, texte style */
 
 body {
     min-height: 100vh;
@@ -22,27 +22,69 @@ p {
     font-size: 1.1em;
 }
 
+/* Bouton de contact */
+
+button.contact-top-bar {
+  background: rgb(26, 129, 0);
+  border-style: solid;
+  border-width: 0 10px 0 10px;
+  border-color: rgb(26, 129, 0);
+  color: #ffffff;
+  font-size: 0.9em;
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 999px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+button.contact-top-bar:hover {
+  background: rgb(16, 100, 0);
+  border-color: rgb(16, 100, 0);
+  transform: scale(1.05);
+}
+
+
+/* Top-bar */
+
 #top-bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(46, 46, 46, 0.582);
-    color: #ffffff;
-    padding: 16px 0;
-    text-align: center;
-    font-size: 1.2em;
-    transition: transform 0.3s;
-    z-index: 1000;
-    opacity: 0.85;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(128px);
-    border-bottom: 1px solid rgb(156, 156, 156);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(46, 46, 46, 0.582);
+  color: #ffffff;
+  padding: 16px 24px;
+  font-size: 1.2em;
+  z-index: 1000;
+  opacity: 0.85;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(128px);
+  border-bottom: 1px solid rgb(156, 156, 156);
+  box-sizing: border-box;
+
+  transition: transform 0.3s ease;
+  transform: translateY(0);
 }
 
 #top-bar.hide {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+/* Alignement du texte */
+
+.left-text,
+.right-text {
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.right-text {
+  text-align: right;
 }
 
 /* Encadrée de présentation */
@@ -136,7 +178,7 @@ p {
     }
 }
 
-/* Téléphone */
+/* */
 
 @media (max-width: 700px) {
     .content-box {
