@@ -18,7 +18,6 @@ window.addEventListener('DOMContentLoaded', function() {
         phase: Math.random() * Math.PI * 2,
     }));
 
-    // Gestion des vagues (optionnelle)
     let waveOffset = 0;
     let lastScrollY = window.scrollY;
     window.addEventListener('scroll', function() {
@@ -28,7 +27,6 @@ window.addEventListener('DOMContentLoaded', function() {
         lastScrollY = currentY;
     });
 
-    // Gestion des bulles
     const bubbles = [];
     const maxBubbles = 50;
 
@@ -36,6 +34,14 @@ window.addEventListener('DOMContentLoaded', function() {
     const competences = document.getElementById('competences');
     const presentationOffsetTop = presentation.offsetTop;
     const competencesOffsetTop = competences.offsetTop;
+
+    // Position du curseur
+    let mouseX = canvas.width / 2;
+    let mouseY = canvas.height / 2;
+    window.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
 
     function createBubble(y = null) {
         return {
@@ -55,20 +61,39 @@ window.addEventListener('DOMContentLoaded', function() {
 
         bubbles.forEach((b, i) => {
             if (!isCompetencesActive) {
-                // Bulles montent vers le haut avec oscillation horizontale
                 b.y -= b.speed;
+                // Oscillation horizontale
                 b.x += Math.sin(b.y * 0.05 + b.x) * 0.5;
-                b.opacity -= 0.002;
 
+                // Attraction vers curseur
+                const dx = mouseX - b.x;
+                const dy = (mouseY + window.scrollY) - b.y; // y en coords page
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist > 1) {
+                    const attractionForce = 0.05; // force d'attraction
+                    b.x += (dx / dist) * attractionForce;
+                    b.y += (dy / dist) * attractionForce;
+                }
+
+                b.opacity -= 0.002;
                 if (b.y + b.radius < presentationOffsetTop || b.opacity <= 0) {
                     bubbles[i] = createBubble();
                 }
             } else {
-                // Bulles dispersées avec mouvements doux
                 b.x += b.drift * 0.5;
                 b.y += (Math.sin(b.x * 0.05) * 0.5);
-                b.opacity -= 0.001;
 
+                // Attraction vers curseur dans canvas fixe
+                const dx = mouseX - b.x;
+                const dy = mouseY - b.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist > 1) {
+                    const attractionForce = 0.5;
+                    b.x += (dx / dist) * attractionForce;
+                    b.y += (dy / dist) * attractionForce;
+                }
+
+                b.opacity -= 0.001;
                 if (
                     b.opacity <= 0 ||
                     b.x < -50 || b.x > canvas.width + 50 ||
@@ -105,7 +130,6 @@ window.addEventListener('DOMContentLoaded', function() {
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Fond océan
         const bgGrad = ctx.createLinearGradient(0, 0, 0, canvas.height);
         bgGrad.addColorStop(0, "#4fc3f7");
         bgGrad.addColorStop(0.5, "#1565c0");
