@@ -13,11 +13,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
     const waveCount = 4;
     const waves = Array.from({length: waveCount}, (_, i) => ({
-        amplitude: 40 + i * 20,
-        wavelength: 300 + i * 100,
+        amplitude: 5 + i * 10,
+        wavelength: 1000 + i * 100,
         speed: 0.008 + i * 0.003,
         phase: Math.random() * Math.PI * 2,
-        colorStops: i % 0 === 0 ? ['#696969ff', '#fff'] : ['#fff', '#424242ff'],
+        colorStops: i % 0 === 0 ? ['#000000ff', '#fff'] : ['#fff', '#ffffffff'],
     }));
 
     let waveOffset = 0;
@@ -69,7 +69,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             // Dessin du contour de la vague
             ctx.save();
-            ctx.globalAlpha = 0.08;
+            ctx.globalAlpha = 0;
             const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
             const colorTop = `rgba(${baseR + 20},${baseG + 20},${baseB + 20},1)`;
             const colorBottom = `rgba(${baseR},${baseG},${baseB},1)`;
