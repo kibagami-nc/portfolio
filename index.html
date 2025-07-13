@@ -8,29 +8,28 @@
 
     <!-- Feuilles de style -->
     <link rel="stylesheet" href="./css/presentation.css">
-    <link rel="stylesheet" href="./css/projets.css">
+    <link rel="stylesheet" href="./css/competences.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Script -->
     <script defer src="./js/style.js"></script>
     <script defer src="./js/script.js"></script>
-
 </head>
 
 <body>
     <!-- Canvas de fond animé -->
     <canvas id="bg-anim" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;"></canvas>
 
-    <div class="Presentation">
-        <!-- Barre de navigation -->
-        <div id="top-bar">
-            <div class="left-text">Manley</div>
-            <div class="right-text">
-                <button class="contact-top-bar">Contact</button>
-            </div>
+    <!-- Barre de navigation (toujours visible en haut) -->
+    <div id="top-bar">
+        <div class="left-text">Manley</div>
+        <div class="right-text">
+            <button class="contact-top-bar">Contact</button>
         </div>
+    </div>
 
-        <!-- Encadré de présentation -->
+    <!-- Section Présentation -->
+    <section id="presentation" class="Presentation">
         <div class="content-box-presentation">
             <h1>👨‍💻 <b>Manley Bouille</b> 🌊</h1>
             <p>
@@ -39,27 +38,22 @@
                 <br><br>Vous pouvez explorer mes <b><i>réalisations</i></b> et me contacter pour toute <b><i>collaboration</i></b> ou <b><i>question</i></b>.
             </p>
         </div>
-
-        <!-- Flèche animée vers le bas -->
-        <div class="fleche">
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-        </div>
+    </section>
 
 
+    <!-- Section Compétences -->
+    <section id="competences" class="Compétences">
         <!-- Liste défilante avec icônes -->
-    <div class="scroll-container">
-        <ul class="scroll-list">
-            <li><i class="fas fa-code"></i><span>Code</span></li>
-            <li><i class="fas fa-paint-brush"></i><span>Design</span></li>
-            <li><i class="fas fa-database"></i><span>Données</span></li>
-            <li><i class="fas fa-cloud"></i><span>Cloud</span></li>
-            <li><i class="fas fa-robot"></i><span>IA</span></li>
-        </ul>
-    </div>
-    
-</div>
+        <div class="scroll-container">
+            <ul class="scroll-list">
+                <li><i class="fas fa-code"></i><span>Code</span></li>
+                <li><i class="fas fa-paint-brush"></i><span>Design</span></li>
+                <li><i class="fas fa-database"></i><span>Données</span></li>
+                <li><i class="fas fa-cloud"></i><span>Cloud</span></li>
+                <li><i class="fas fa-robot"></i><span>IA</span></li>
+            </ul>
+        </div>
+    </section>
 
 </body>
 

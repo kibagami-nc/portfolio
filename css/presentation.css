@@ -22,6 +22,16 @@ p {
     font-size: 1.1em;
 }
 
+#presentation {
+  display: flex;
+  justify-content: flex-start; /* aligné à gauche horizontalement */
+  align-items: center;         /* centré verticalement */
+  min-height: 100vh;           /* hauteur pleine de la fenêtre */
+  padding-left: 50px;          /* laisse un peu d’espace à gauche */
+  box-sizing: border-box;
+}
+
+
 /* Bouton de contact */
 
 button.contact-top-bar {
@@ -91,9 +101,7 @@ button.contact-top-bar:hover {
 
 .content-box-presentation {
     max-width: 500px;
-    margin-top: 300px;
-    margin-right: auto;
-    margin-left: 50px;
+    margin: 0; /* supprimer marges */
     background: #ffffff;
     border-radius: 30px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -104,82 +112,11 @@ button.contact-top-bar:hover {
     align-items: flex-start;
 }
 
+
 .content-box-presentation:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
     z-index: 2;
-}
-
-/* Flèche */
-
-.fleche {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    transform: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    z-index: 1;
-}
-
-
-.chevron {
-    position: relative;
-    width: 2.1rem;
-    height: 0.50rem;
-    transition: opacity 1s, transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
-    transform: scale(0.3);
-    animation: move-chevron 3s ease-out infinite;
-}
-
-.chevron:first-child {
-    animation: move-chevron 3s ease-out 1s infinite;
-}
-
-.chevron:nth-child(2) {
-    animation: move-chevron 3s ease-out 2s infinite;
-}
-
-.chevron:before,
-.chevron:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background: #ffffff;
-}
-
-.chevron:before {
-    left: 0;
-    transform: skewY(30deg);
-}
-
-.chevron:after {
-    right: 0;
-    width: 50%;
-    transform: skewY(-30deg);
-}
-
-@keyframes move-chevron {
-    25% {
-        opacity: 1;
-    }
-    33.3% {
-        opacity: 1;
-        transform: translateY(2.28rem);
-    }
-    66.6% {
-        opacity: 1;
-        transform: translateY(3.12rem);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(4.8rem) scale(0.5);
-    }
 }
 
 

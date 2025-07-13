@@ -1,7 +1,15 @@
+#competences{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
 /* Scroll container */
 
 .scroll-container {
-    margin-top: 400px; /* espace sous la flèche */
+    margin-top: 400px;
     overflow: hidden;
     background: #fff;
     width: 100%;
