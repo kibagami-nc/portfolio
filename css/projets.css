@@ -1,0 +1,37 @@
+/* Scroll container */
+
+.scroll-container {
+    margin-top: 400px; /* espace sous la flèche */
+    overflow: hidden;
+    background: #fff;
+    width: 100%;
+}
+
+.scroll-list {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    animation: scroll-left 15s linear infinite;
+}
+
+.scroll-list li {
+    text-align: center;
+    cursor: pointer;
+}
+
+.scroll-list li i {
+    font-size: 2em;
+    color: #4CAF50;
+    display: block;
+}
+
+.scroll-list:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
