@@ -89,9 +89,10 @@ button.contact-top-bar:hover {
 
 /* Encadrée de présentation */
 
-.content-box-pres {
+.content-box-presentation {
     max-width: 500px;
     margin-top: 300px;
+    margin-right: auto;
     margin-left: 50px;
     background: #ffffff;
     border-radius: 30px;
@@ -103,7 +104,7 @@ button.contact-top-bar:hover {
     align-items: flex-start;
 }
 
-.content-box-pres:hover {
+.content-box-presentation:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
     z-index: 2;
@@ -178,30 +179,42 @@ button.contact-top-bar:hover {
     }
 }
 
-/* */
+/* Scroll container */
 
-@media (max-width: 700px) {
-    .content-box {
-        max-width: 95vw;
-        margin-top: 80px;
-        margin-left: 2vw;
-        border-radius: 18px;
-        border-width: 10px;
-        padding: 18px 12px;
-    }
-    .container {
-        bottom: 40px;
-    }
-    #top-bar {
-        font-size: 1em;
-        padding: 10px 0;
-    }
-    .content-box-a-propos {
-        max-width: 95vw;
-        margin-left: 2vw;
-        margin-top: 40px;
-        border-radius: 18px;
-        padding: 18px 12px;
-    }
+.scroll-container {
+    margin-top: 400px; /* espace sous la flèche */
+    overflow: hidden;
+    background: #fff;
+    width: 100%;
 }
+
+.scroll-list {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    animation: scroll-left 15s linear infinite;
+}
+
+.scroll-list li {
+    text-align: center;
+    cursor: pointer;
+}
+
+.scroll-list li i {
+    font-size: 2em;
+    color: #4CAF50;
+    display: block;
+}
+
+.scroll-list:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
 

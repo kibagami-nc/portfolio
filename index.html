@@ -5,15 +5,23 @@
     <meta charset="UTF-8" />
     <title>🌊 Portfolio - Manley.B 🌊</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Feuilles de style -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Script -->
+    <script defer src="./js/style.js"></script>
+    <script defer src="./js/script.js"></script>
+
 </head>
 
 <body>
+    <!-- Canvas de fond animé -->
+    <canvas id="bg-anim" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;"></canvas>
+
     <div class="Presentation">
-        <script src="./js/style.js"></script>
-
-        <canvas id="bg-anim" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;"></canvas>
-
+        <!-- Barre de navigation -->
         <div id="top-bar">
             <div class="left-text">Manley</div>
             <div class="right-text">
@@ -21,41 +29,33 @@
             </div>
         </div>
 
-        <div class="content-box-pres">
+        <!-- Encadré de présentation -->
+        <div class="content-box-presentation">
             <h1>👨‍💻 <b>Manley Bouille</b> 🌊</h1>
             <p>
                 <br>Je suis passionné par le <b><i>développement web</i></b> et j'aime créer des applications <b><i>interactives</i></b> 🖥️.
-                <br>
-                <br>Ce portfolio est un aperçu de mes <b><i>projets</i></b> et de mes <b><i>compétences</i></b> 🌸.
-                <br>
-                <br>Vous pouvez explorer mes <b><i>réalisations</i></b> et me contacter pour toute <b><i>collaboration</i></b> ou <b><i>question</i></b>.
+                <br><br>Ce portfolio est un aperçu de mes <b><i>projets</i></b> et de mes <b><i>compétences</i></b> 🌸.
+                <br><br>Vous pouvez explorer mes <b><i>réalisations</i></b> et me contacter pour toute <b><i>collaboration</i></b> ou <b><i>question</i></b>.
             </p>
         </div>
 
-        <script>
-            let lastScrollY = window.scrollY;
-            const bar = document.getElementById('top-bar');
-            window.addEventListener('scroll', function () {
-                if (window.scrollY < lastScrollY) {
-                    bar.classList.remove('hide');
-                } else if (window.scrollY > lastScrollY && window.scrollY > 50) {
-                    bar.classList.add('hide');
-                }
-                lastScrollY = window.scrollY;
-            });
-        </script>
-
+        <!-- Flèche animée vers le bas -->
         <div class="fleche">
             <div class="chevron"></div>
             <div class="chevron"></div>
             <div class="chevron"></div>
         </div>
-    </div>
 
-
-
-    <div class="content-box-projets">
-
+        <!-- Liste défilante avec icônes -->
+        <div class="scroll-container">
+            <ul class="scroll-list">
+                <li><i class="fas fa-code"></i><span>Code</span></li>
+                <li><i class="fas fa-paint-brush"></i><span>Design</span></li>
+                <li><i class="fas fa-database"></i><span>Données</span></li>
+                <li><i class="fas fa-cloud"></i><span>Cloud</span></li>
+                <li><i class="fas fa-robot"></i><span>IA</span></li>
+            </ul>
+        </div>
     </div>
 
 </body>
