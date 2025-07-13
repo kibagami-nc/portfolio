@@ -1,0 +1,56 @@
+/* Responsive téléphones */
+
+@media (max-width: 600px) {
+  /* Présentation */
+  #presentation {
+    padding-left: 20px;
+    justify-content: flex-start;
+    min-height: auto; /* évite trop d’espace vertical */
+    padding-top: 100px; /* espace sous la top-bar */
+  }
+  
+  .content-box-presentation {
+    max-width: 90vw;  /* large mais pas trop */
+    border-width: 15px;
+    border-radius: 20px;
+    padding: 15px;
+  }
+  
+  /* Top bar */
+  #top-bar {
+    font-size: 1em;
+    padding: 12px 16px;
+  }
+  
+  /* Bouton contact */
+  button.contact-top-bar {
+    padding: 6px 15px;
+    font-size: 0.85em;
+    border-width: 0 8px 0 8px;
+  }
+  
+  /* Section compétences */
+  #competences {
+    padding-left: 20px;
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  /* Scroll container */
+  .scroll-container {
+    margin-top: 100px;
+    overflow-x: auto; /* scroll horizontal sur mobile */
+    background: #fff;
+    width: 100%;
+  }
+  
+  .scroll-list {
+    animation: none; /* stop animation scroll pour mobile */
+    gap: 30px;
+    padding: 10px;
+  }
+  
+  .scroll-list li i {
+    font-size: 1.6em;
+  }
+}
