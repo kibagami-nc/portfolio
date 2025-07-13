@@ -9,7 +9,7 @@
 /* Scroll container */
 
 .scroll-container {
-    margin-top: 1px;
+    margin-top: -700px;
     overflow: hidden;
     background: #00ccffb4;
     width: 500%;
