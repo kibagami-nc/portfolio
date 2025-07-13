@@ -1,27 +1,3 @@
-/* Fond, texte style */
-
-body {
-    min-height: 100vh;
-    margin: 0;
-    background: none;
-}
-
-h1 {
-    padding: 0;
-    background: none;
-    border-radius: 0;
-    box-shadow: none;
-    border: none;
-    text-align: left;
-    margin: 0 0 24px 0;
-}
-
-p {
-    text-align: left;
-    margin: 0;
-    font-size: 1.1em;
-}
-
 #presentation {
   display: flex;
   justify-content: flex-start; /* aligné à gauche horizontalement */
@@ -30,7 +6,6 @@ p {
   padding-left: 50px;          /* laisse un peu d’espace à gauche */
   box-sizing: border-box;
 }
-
 
 /* Bouton de contact */
 
@@ -101,10 +76,9 @@ button.contact-top-bar:hover {
 
 .content-box-presentation {
     max-width: 500px;
-    margin: 0; /* supprimer marges */
     background: #ffffff;
     border-radius: 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     border: 30px solid #ffffff;
     transition: opacity 1s, transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
     display: flex;
@@ -118,6 +92,50 @@ button.contact-top-bar:hover {
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
     z-index: 2;
 }
+
+/* Image de profil */
+
+/* Conteneur global des deux éléments */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  box-sizing: border-box;
+}
+
+/* Texte à gauche */
+.intro {
+  flex: 1;
+  text-align: left;
+  padding: 40px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Image à droite */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.image-container img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 16px;
+}
+
+
+
 
 
 
