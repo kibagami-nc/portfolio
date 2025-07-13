@@ -75,7 +75,7 @@ button.contact-top-bar:hover {
 /* Encadrée de présentation */
 
 .content-box-presentation {
-    max-width: 500px;
+    max-width: 700px;
     background: #ffffff;
     border-radius: 30px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -107,17 +107,6 @@ button.contact-top-bar:hover {
   box-sizing: border-box;
 }
 
-/* Texte à gauche */
-.intro {
-  flex: 1;
-  text-align: left;
-  padding: 40px;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #ffffff;
-  border-radius: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
 /* Image à droite */
 .image-container {
   flex: 1;
@@ -125,14 +114,16 @@ button.contact-top-bar:hover {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
 }
 
 .image-container img {
-  max-width: 50%;
+  width: 100%;
+  max-width: 400px; /* limite la taille maximale de l’image */
   height: auto;
-  border-radius: 16px;
+  border-radius: 30%;
+  transition: transform 0.3s ease, width 0.3s ease;
 }
+
 
 
 
