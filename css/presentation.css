@@ -86,6 +86,12 @@ button.contact-top-bar:hover {
     align-items: flex-start;
 }
 
+.content-box-presentation h1 {
+    font-size: 2.5em;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
 
 .content-box-presentation:hover {
     transform: scale(1.05);

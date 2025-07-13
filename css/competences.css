@@ -11,15 +11,16 @@
 .scroll-container {
     margin-top: 1px;
     overflow: hidden;
-    background: #fff;
-    width: 100%;
+    background: #00ccffb4;
+    width: 500%;
 }
+
 
 .scroll-list {
     display: flex;
     gap: 60px;
     list-style: none;
-    padding: 20px;
+    padding: 40px 20px;
     margin: 0;
     animation: scroll-left 15s linear infinite;
 }
@@ -31,7 +32,7 @@
 
 .scroll-list li i {
     font-size: 2em;
-    color: #4CAF50;
+    color: #ffffff;
     display: block;
 }
 
