@@ -69,7 +69,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             // Dessin du contour de la vague
             ctx.save();
-            ctx.globalAlpha = 0.7 - idx * 0.15;
+            ctx.globalAlpha = 0.08;
             const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
             const colorTop = `rgba(${baseR + 20},${baseG + 20},${baseB + 20},1)`;
             const colorBottom = `rgba(${baseR},${baseG},${baseB},1)`;
