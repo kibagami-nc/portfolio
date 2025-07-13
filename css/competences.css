@@ -11,7 +11,7 @@
 .scroll-container {
     margin-top: -700px;
     overflow: hidden;
-    background: #00ccffb4;
+    background: linear-gradient(120deg, #3a0896, #0a4db3);
     width: 500%;
 }
 
