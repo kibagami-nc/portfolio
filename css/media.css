@@ -1,56 +1,72 @@
-/* Responsive téléphones */
+/* === Responsive Design pour Mobile === */
 
-@media (max-width: 600px) {
-  /* Présentation */
+@media (max-width: 768px) {
+
   #presentation {
-    padding-left: 20px;
-    justify-content: flex-start;
-    min-height: auto; /* évite trop d’espace vertical */
-    padding-top: 100px; /* espace sous la top-bar */
-  }
-  
-  .content-box-presentation {
-    max-width: 90vw;  /* large mais pas trop */
-    border-width: 15px;
-    border-radius: 20px;
-    padding: 15px;
-  }
-  
-  /* Top bar */
-  #top-bar {
-    font-size: 1em;
-    padding: 12px 16px;
-  }
-  
-  /* Bouton contact */
-  button.contact-top-bar {
-    padding: 6px 15px;
-    font-size: 0.85em;
-    border-width: 0 8px 0 8px;
-  }
-  
-  /* Section compétences */
-  #competences {
-    padding-left: 20px;
     flex-direction: column;
-    min-height: auto;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 150px;
+    text-align: center;
   }
-  
-  /* Scroll container */
-  .scroll-container {
-    margin-top: 100px;
-    overflow-x: auto; /* scroll horizontal sur mobile */
-    background: #fff;
-    width: 100%;
-  }
-  
-  .scroll-list {
-    animation: none; /* stop animation scroll pour mobile */
+
+  .content-wrapper {
+    flex-direction: column;
+    padding: 40px 20px;
     gap: 30px;
-    padding: 10px;
   }
-  
-  .scroll-list li i {
-    font-size: 1.6em;
+
+  .content-box-presentation,
+  .content-box-competences {
+    max-width: 90%;
+    border-width: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-box-presentation h1,
+  .content-box-competences h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .image-container img {
+    max-width: 80%;
+    border-radius: 20%;
+  }
+
+  #top-bar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 16px;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .left-text,
+  .right-text {
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .right-text {
+    text-align: center;
+  }
+
+  .scroll-container {
+  width: 400%;
+  margin-top: -700px;
+  }
+
+  .scroll-list {
+    gap: 30px;
+    padding: 20px 10px;
+  }
+
+  button.contact-top-bar {
+    padding: 10px 16px;
+    font-size: 1em;
   }
 }
